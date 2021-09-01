@@ -1,3 +1,4 @@
+/*
 From LeetCode  175. Combine Two Tables ,Easy
 Table: Person
 
@@ -29,6 +30,7 @@ FirstName, LastName, City, State
 =============================================================================================================
 
 // Solution codes
+*/
 select FirstName, LastName, City, State
 from Person 
 left join Address
