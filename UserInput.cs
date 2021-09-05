@@ -36,3 +36,33 @@ public class UserInput
 
 =======================================================================================
 
+using System;
+ 
+public class TextInput {
+    
+    public static string outputs;
+    
+    public virtual void Add(char c) {
+    
+        outputs += c; // adds the given character to the current value
+    }
+    
+    public string GetValue(){
+        
+        return outputs; //returns the current value
+    }
+}
+ 
+public class NumericInput : TextInput {
+    public override void Add(char c) {
+    
+         var isNumeric = int.TryParse(c.ToString(), out int n);
+        if(isNumeric){
+            outputs += c;
+        }
+        return;
+    }
+    
+}
+ 
+
