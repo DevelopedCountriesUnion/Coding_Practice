@@ -1,0 +1,26 @@
+A company is designing the class hierarchy for various cache implementations:
+
+public class Cache {}
+
+public class DiskCache : Cache {}
+
+public class MemoryCache : Cache {}
+
+public class OptimizedDiskCache : DiskCache {}
+Select all the answers that will result in a runtime exception.
+
+(Select all acceptable answers.)
+                                    Your score is 100%, perfect!
+====================================================================
+
+MemoryCache memoryCache = new MemoryCache();
+Cache cache = (Cache) memoryCache;
+DiskCache diskCache = (DiskCache) cache;
+-----------------------------------------------
+
+DiskCache diskCache = new DiskCache();
+OptimizedDiskCache optimizedDiskCache = (OptimizedDiskCache) diskCache;
+--------------------------------------------------------------
+
+Cache cache = new Cache();
+MemoryCache memoryCache = (MemoryCache) cache;
